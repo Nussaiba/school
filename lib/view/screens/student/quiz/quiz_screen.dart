@@ -47,7 +47,7 @@ class QuizScreen extends StatelessWidget {
                               },
                               isChoose: false,
                               onPressedChoose: () {
-                                examController.pickFileData();
+                                examController .pickFileData();
                               },
                             );
                           },
