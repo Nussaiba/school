@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "67672b5d-72c5-4311-80f1-c97aa67f812a",
+		"name": "schoolApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26532150"
+	},
+	"item": [
+		{
+			"name": "subject",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "lesson",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/events/7",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"student",
+						"events",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,1097 @@
+{
+	"info": {
+		"_postman_id": "5ddcc237-a082-4ab6-a205-dc22dc0b2e8a",
+		"name": "schoolApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37454530"
+	},
+	"item": [
+		{
+			"name": "exam",
+			"item": [
+				{
+					"name": "mainExam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/main_exam/545/7",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"main_exam",
+								"545",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "startExam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/main_exam/start/1856/7",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"main_exam",
+								"start",
+								"1856",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "content_id",
+									"value": "1856\n",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "[{ \"62\": [\n      \"10\"\n    ]}]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/main_exam/submit",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"main_exam",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewExam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/api/dashboard/student/view_quize/1856/7",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"api",
+								"dashboard",
+								"student",
+								"view_quize",
+								"1856",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendExamFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "item_id",
+									"value": "1\n",
+									"type": "text"
+								},
+								{
+									"key": "file[0]",
+									"type": "file",
+									"src": "SiFv1Y_mN/d2.jpg"
+								},
+								{
+									"key": "extension",
+									"value": "jpg\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/upload_exam_files2",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"upload_exam_files2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "chatTacher",
+					"item": [
+						{
+							"name": "getMessage",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ssvs.mysunriseit.com/api/get_message/170",
+									"protocol": "https",
+									"host": [
+										"ssvs",
+										"mysunriseit",
+										"com"
+									],
+									"path": [
+										"api",
+										"get_message",
+										"170"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "chatTeacher",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ssvs.mysunriseit.com/api/get_message_student/170/7",
+									"protocol": "https",
+									"host": [
+										"ssvs",
+										"mysunriseit",
+										"com"
+									],
+									"path": [
+										"api",
+										"get_message_student",
+										"170",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendMessage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "student_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "teacher_id",
+											"value": "170",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "مرحبا يا طالب",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://ssvs.mysunriseit.com/api/dashboard/teacher/send_message",
+									"protocol": "https",
+									"host": [
+										"ssvs",
+										"mysunriseit",
+										"com"
+									],
+									"path": [
+										"api",
+										"dashboard",
+										"teacher",
+										"send_message"
+									],
+									"query": [
+										{
+											"key": "teacher_id",
+											"value": "170",
+											"disabled": true
+										},
+										{
+											"key": "message",
+											"value": "مرحبا يا طالب",
+											"disabled": true
+										},
+										{
+											"key": "student_id",
+											"value": "7",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "typeMessage",
+					"item": [
+						{
+							"name": "get_room_student",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ssvs.mysunriseit.com/api/get_room_student/170",
+									"protocol": "https",
+									"host": [
+										"ssvs",
+										"mysunriseit",
+										"com"
+									],
+									"path": [
+										"api",
+										"get_room_student",
+										"170"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendSingleMessage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "teacher_id",
+											"value": "170",
+											"type": "text"
+										},
+										{
+											"key": "student_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "hello",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://ssvs.mysunriseit.com/api/dashboard/teacher/send_message",
+									"protocol": "https",
+									"host": [
+										"ssvs",
+										"mysunriseit",
+										"com"
+									],
+									"path": [
+										"api",
+										"dashboard",
+										"teacher",
+										"send_message"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendGroupMessage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "teacher_id",
+											"value": "170",
+											"type": "text"
+										},
+										{
+											"key": "room_id",
+											"value": "545",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "helllooos",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://ssvs.mysunriseit.com/api/dashboard/teacher/send_group_message",
+									"protocol": "https",
+									"host": [
+										"ssvs",
+										"mysunriseit",
+										"com"
+									],
+									"path": [
+										"api",
+										"dashboard",
+										"teacher",
+										"send_group_message"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "classesTeacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/teacher_classes/170",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"teacher_classes",
+								"170"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/teacher_rooms/1/170",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"teacher_rooms",
+								"1",
+								"170"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/teacher_subjects/545/170",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"teacher_subjects",
+								"545",
+								"170"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lesson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/teacher_lessons/8/545/170",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"teacher_lessons",
+								"8",
+								"545",
+								"170"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lessonContain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/get_teacher_lesson_details/545/8/170/3098/4",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"get_teacher_lesson_details",
+								"545",
+								"8",
+								"170",
+								"3098",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tableTeacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/teacher_schedule/170",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"teacher_schedule",
+								"170"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addLessonContain",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "درس555",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "class_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "545",
+									"type": "text"
+								},
+								{
+									"key": "lesson_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "lecture_id",
+									"value": "3098",
+									"type": "text"
+								},
+								{
+									"key": "teacher_id",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "0vYfcADVm/17.png"
+								},
+								{
+									"key": "extension",
+									"value": ".jpg",
+									"type": "text"
+								},
+								{
+									"key": "anyfile_extension",
+									"value": "jpg",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "0000-01-01 00:00:00.000",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "0000-01-01 00:00:00.000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/teacher/store/items",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"teacher",
+								"store",
+								"items"
+							]
+						},
+						"description": "type 4==درس\n\ntype==1 homewrok\n\ntype==0 video\n\ntype==6 audio"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chatStudent",
+			"item": [
+				{
+					"name": "StudentMessage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/messages/7",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"messages",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chatStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/messages/get_teacher_message/7/170/2",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"messages",
+								"get_teacher_message",
+								"7",
+								"170",
+								"2"
+							]
+						},
+						"description": "منبعت رقم الطالب 7 ورقم المدرس 170 ورقم التايب يلي هو جاية من api student message user type"
+					},
+					"response": []
+				},
+				{
+					"name": "SendMessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "teacher_id",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "مرحبا يا مدرس",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/messages/store_message",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"messages",
+								"store_message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tests",
+			"item": [
+				{
+					"name": "New Folder",
+					"item": []
+				},
+				{
+					"name": "startTest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/exam_test/start/3019/7",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"exam_test",
+								"start",
+								"3019",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submitTest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "student_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "content_id",
+									"value": "3019",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/exam_test/submit",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"exam_test",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewTest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/view_quize/3019/7",
+							"protocol": "https",
+							"host": [
+								"ssvs",
+								"mysunriseit",
+								"com"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"student",
+								"view_quize",
+								"3019",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/get_student_subjects/545/7",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"get_student_subjects",
+						"545",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rymyabymrshd78@ssvs.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "rym@832874",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/get_login_student_info",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"get_login_student_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lesson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/get_student_lessons/8/545/7",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"get_student_lessons",
+						"8",
+						"545",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/events/7",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"student",
+						"events",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/get_certificate/7",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"student",
+						"get_certificate",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tableStudent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/schedule/545/7/180",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"student",
+						"schedule",
+						"545",
+						"7",
+						"180"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lessoncontain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/get_student_lesson_details/545/3098/7/8/4",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"get_student_lesson_details",
+						"545",
+						"3098",
+						"7",
+						"8",
+						"4"
+					]
+				},
+				"description": "3098 رقم الدرس 8 رقم leeson id"
+			},
+			"response": []
+		},
+		{
+			"name": "medals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/medals/7",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"student",
+						"medals",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gradute",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ssvs.mysunriseit.com/api/dashboard/student/graduate/7/545",
+					"protocol": "https",
+					"host": [
+						"ssvs",
+						"mysunriseit",
+						"com"
+					],
+					"path": [
+						"api",
+						"dashboard",
+						"student",
+						"graduate",
+						"7",
+						"545"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
